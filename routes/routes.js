@@ -11,7 +11,7 @@ module.exports = function (app) {
         .get(createController.Index)
         .post(createController.Create)
 
-    app.route('/:petId')
+    app.route('/pet/:petId')
         .get(homeController.petUmbrella);
 }
 
