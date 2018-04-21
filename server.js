@@ -4,13 +4,19 @@ var port = process.env.PORT || 2000;
 var bodyParser = require('body-parser');
 var routes = require('./routes/routes');
 
-routes(app);
+
 
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/x-www-form-urlencoded 
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json 
+app.use(bodyParser.json())
+
+routes(app);
 
 app.listen(port);
 

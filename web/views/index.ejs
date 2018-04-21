@@ -3,6 +3,33 @@
   <head>
   </head>
   <body>
-    testing 123
+    Does your pet need and umbrella!?
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Breed</th>
+            <th>Location</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Umbrella</th>
+          </tr>
+      <% for(var i=0; i < data.length; i++) { %>         
+         <tr>
+           <td><%= data[i].name %></td>
+           <td><%= data[i].breed %></td>
+           <td><%= data[i].location %></td>
+           <td><%= data[i].latitude %></td>
+           <td><%= data[i].longitude %></td>
+           <td>select</td>
+         </tr>
+      <% } %>
+      </table>
+
+      <br>
+      <br>
+      
+      <a href="/create">create new pet</a> 
   </body>
 </html>
