@@ -22,14 +22,16 @@
            <td><%= data[i].location %></td>
            <td><%= data[i].latitude %></td>
            <td><%= data[i].longitude %></td>
-           <td>select</td>
+           <td>
+           <a href="/<%= data[i].id %>">Select</a>
+          </td>
          </tr>
       <% } %>
       </table>
 
       <br>
       <br>
-      
+
       <a href="/create">create new pet</a> 
   </body>
 </html>

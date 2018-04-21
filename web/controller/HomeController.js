@@ -6,5 +6,15 @@ exports.Index = (req, res) => {
     });    
 }
 
+exports.petUmbrella = (req, res) => {
+    var ListOfPets = shelterApiService.GetPet(req.params.petId, (responseObject) => {
+        shelterApiService.getWeather(JSON.parse(responseObject), (responseObject) => {
+            res.render('../web/views/pet', {data: responseObject});
+        })        
+    });  
+    
+}    
+
+
 
     

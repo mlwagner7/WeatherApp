@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    Does your pet need and umbrella!?
+    <br>
+    <br>
+    <table>
+            <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Location</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Umbrella</th>
+              </tr>    
+             <tr>
+               <td><%= data[0].name %></td>
+               <td><%= data[0].breed %></td>
+               <td><%= data[0].location %></td>
+               <td><%= data[0].latitude %></td>
+               <td><%= data[0].longitude %></td>
+               <td><%= data[0].precipProbability >= .20 ? 'YES' : 'NO' %></td>
+             </tr>
+          </table>
+  </body>
+</html>

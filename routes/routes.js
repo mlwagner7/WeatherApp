@@ -10,5 +10,8 @@ module.exports = function (app) {
     app.route('/create')
         .get(createController.Index)
         .post(createController.Create)
+
+    app.route('/:petId')
+        .get(homeController.petUmbrella);
 }
 
