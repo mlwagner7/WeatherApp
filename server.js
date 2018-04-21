@@ -20,4 +20,8 @@ routes(app);
 
 app.listen(port);
 
+
+app.use(function(err, req, res, next){
+    res.status(400).json(err);
+  });
 console.log('Web Site Started.')
